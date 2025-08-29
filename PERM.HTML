@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERM BANDA CHURCH</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #3b82f6; /* A clean blue color */
+            margin: 10px auto 0;
+            border-radius: 9999px;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/d1d5db/4b5563?text=Welcome+to+PERM+BANDA+CHURCH');
+            background-size: cover;
+            background-position: center;
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+        .aspect-w-16 {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        .aspect-h-9 {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+        .aspect-w-16 iframe, .aspect-h-9 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">PERM BANDA CHURCH</a>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="#services" class="hover:text-blue-600 transition duration-300 ease-in-out">Services</a>
+                <a href="#ministries" class="hover:text-blue-600 transition duration-300 ease-in-out">Ministries</a>
+                <a href="#beliefs" class="hover:text-blue-600 transition duration-300 ease-in-out">Our Beliefs</a>
+                <a href="#community" class="hover:text-blue-600 transition duration-300 ease-in-out">Community</a>
+                <a href="#testimonies" class="hover:text-blue-600 transition duration-300 ease-in-out">Testimonies</a>
+                <a href="#sermons" class="hover:text-blue-600 transition duration-300 ease-in-out">Sermons</a>
+                <a href="#give" class="hover:text-blue-600 transition duration-300 ease-in-out">Give</a>
+                <a href="#contact" class="hover:text-blue-600 transition duration-300 ease-in-out">Contact</a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+            <a href="#services" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Services</a>
+            <a href="#ministries" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Ministries</a>
+            <a href="#beliefs" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Our Beliefs</a>
+            <a href="#community" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Community</a>
+            <a href="#testimonies" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Testimonies</a>
+            <a href="#sermons" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Sermons</a>
+            <a href="#give" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Give</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white h-screen flex flex-col justify-center items-center text-center px-6 py-12 bg-gray-900 bg-opacity-75">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-pulse">Welcome to PERM BANDA CHURCH</h1>
+        <p class="text-lg md:text-2xl mb-8 font-light">Where Christ's love is lived and shared.</p>
+        <a href="#services" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">Join Our Service</a>
+    </header>
+
+    <!-- About Section - Extended with Pastoral Intro -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Our Mission and Vision</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                At PERM BANDA CHURCH, we are a family dedicated to living out the teachings of Jesus Christ. Our mission is to share the love of God, serve our community, and grow together in faith. We believe in the power of the Holy Spirit to transform lives and build a community that reflects Christ's light in the world.
+            </p>
+            <div class="grid md:grid-cols-2 gap-12 items-start justify-center mt-12">
+                <!-- Senior Pastor -->
+                <div class="flex flex-col items-center text-center bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <img src="https://placehold.co/150x150/d1d5db/4b5563?text=Rev.+Emmanuel" alt="Rev. Emmanuel Akatukunda" class="rounded-full w-40 h-40 object-cover mb-4 shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-1">Rev. Emmanuel Akatukunda</h3>
+                    <p class="text-lg font-semibold text-gray-700 mb-4">Senior Pastor</p>
+                    <div class="space-y-1 text-gray-600">
+                        <p>Contact: <a href="tel:+256702991699">+256702991699</a>, <a href="tel:+256706062966">+256706062966</a></p>
+                    </div>
+                </div>
+                <!-- Assistant Pastor -->
+                <div class="flex flex-col items-center text-center bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <img src="https://placehold.co/150x150/d1d5db/4b5563?text=Pr.+Gideon" alt="Pr. Gideon Onyait" class="rounded-full w-40 h-40 object-cover mb-4 shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-1">Pr. Gideon Onyait</h3>
+                    <p class="text-lg font-semibold text-gray-700 mb-4">Assistant Pastor</p>
+                    <div class="space-y-1 text-gray-600">
+                        <p>Contact: <a href="tel:+256772566848">+256772566848</a>, <a href="tel:+255754247261">+255754247261</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Beliefs Section -->
+    <section id="beliefs" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Our Core Beliefs</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                We are a non-denominational Christian church committed to the infallible word of God. Our faith is rooted in the foundational truths of the Gospel.
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Belief 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md transition-shadow duration-300 hover:shadow-lg">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">The Holy Bible</h3>
+                    <p class="text-gray-700">
+                        We believe the Holy Bible is the inspired Word of God, the supreme and final authority in all matters of faith and conduct. It is the complete revelation of God's will for humanity.
+                    </p>
+                </div>
+                <!-- Belief 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md transition-shadow duration-300 hover:shadow-lg">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">The Trinity</h3>
+                    <p class="text-gray-700">
+                        We believe in one God, eternally existing in three persons: the Father, the Son (Jesus Christ), and the Holy Spirit. They are co-equal and co-eternal, yet distinct in their roles.
+                    </p>
+                </div>
+                <!-- Belief 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md transition-shadow duration-300 hover:shadow-lg">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">Salvation through Christ</h3>
+                    <p class="text-gray-700">
+                        We believe that salvation is a gift from God, offered through grace alone, received through faith alone, in Christ alone. We are justified by His atoning death and resurrected life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Weekly Services & Fellowships</h2>
+            <p class="text-lg text-gray-600 mb-12">Come and join us as we worship and grow in faith together.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sunday Services -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Sunday Service</h3>
+                    <ul class="text-lg text-gray-700 list-disc list-inside text-left">
+                        <li>Bible Studies: <span class="font-semibold">8:00am - 10:00am</span></li>
+                        <li>Main Service: <span class="font-semibold">10:15am onwards</span></li>
+                    </ul>
+                </div>
+                <!-- Mid-Week Fellowships -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Mid-Week Fellowship</h3>
+                    <ul class="text-lg text-gray-700 list-disc list-inside text-left">
+                        <li>Wednesday: <span class="font-semibold">6:00pm - 8:00pm</span></li>
+                        <li>Friday "Burning Altar": <span class="font-semibold">6:00pm - 8:00pm</span></li>
+                    </ul>
+                </div>
+                <!-- Special Events -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Special Events</h3>
+                    <ul class="text-lg text-gray-700 list-disc list-inside text-left">
+                        <li>Overnight Prayer: <span class="font-semibold">Every last Friday of the month</span></li>
+                        <li>Holy Communion: <span class="font-semibold">Every last Sunday of the month</span></li>
+                    </ul>
+                </div>
+                <!-- Praise and Worship Practices -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Praise & Worship Practices</h3>
+                    <ul class="text-lg text-gray-700 list-disc list-inside text-left">
+                        <li>Tuesday & Thursday: <span class="font-semibold">6:30pm - 8:00pm</span></li>
+                        <li>Saturday: <span class="font-semibold">5:30pm - 8:30pm</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ministries Section -->
+    <section id="ministries" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Our Ministries</h2>
+            <p class="text-lg text-gray-600 mb-12">Find a community where you can serve and grow.</p>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Ministries List -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Children" alt="Children's Ministry" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Children's Ministry</h4>
+                    <p class="text-gray-600 text-sm">Nurturing the next generation of believers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Youth" alt="Youth Ministry" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Youth Ministry</h4>
+                    <p class="text-gray-600 text-sm">Building a vibrant and passionate youth community.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Worship" alt="Praise and Worship" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Praise and Worship</h4>
+                    <p class="text-gray-600 text-sm">Leading the congregation in heartfelt worship.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Women" alt="Women's Ministry" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Women's Ministry</h4>
+                    <p class="text-gray-600 text-sm">Empowering women through faith and fellowship.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Men" alt="Men's Ministry" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Men's Ministry</h4>
+                    <p class="text-gray-600 text-sm">Equipping men to be spiritual leaders.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Pastoral" alt="Pastoral Ministry" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Pastoral Ministry</h4>
+                    <p class="text-gray-600 text-sm">Shepherding the congregation with care and wisdom.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Elders" alt="Elders Department" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Elders Department</h4>
+                    <p class="text-gray-600 text-sm">Providing spiritual guidance and oversight.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Deacons" alt="Deacons Department" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Deacons Department</h4>
+                    <p class="text-gray-600 text-sm">Serving the physical needs of the church family.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/100x100/e5e7eb/4b5563?text=Prayer" alt="Prayer Department" class="rounded-full mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Prayer Department</h4>
+                    <p class="text-gray-600 text-sm">A community dedicated to lifting one another in prayer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Outreach Section -->
+    <section id="community" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Serving Our Community in Banda, Kampala</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                Our faith is put into action through active outreach in our local community. We believe in being the hands and feet of Christ, serving our neighbors with love and compassion.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Community Image Card 1 -->
+                <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x300/e5e7eb/4b5563?text=Community+Outreach" alt="Community Outreach" class="rounded-xl mb-4 w-full object-cover">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">Youth Empowerment</h3>
+                    <p class="text-gray-700 text-sm">
+                        We provide mentorship and vocational training programs to empower the youth of Banda, equipping them with skills for a brighter future.
+                    </p>
+                </div>
+                <!-- Community Image Card 2 -->
+                <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x300/e5e7eb/4b5563?text=Food+Distribution" alt="Food Distribution" class="rounded-xl mb-4 w-full object-cover">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">Food for the Hungry</h3>
+                    <p class="text-gray-700 text-sm">
+                        Our volunteers regularly organize food distribution drives to support families in need within the Banda community.
+                    </p>
+                </div>
+                <!-- Community Image Card 3 -->
+                <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x300/e5e7eb/4b5563?text=Medical+Camps" alt="Medical Camps" class="rounded-xl mb-4 w-full object-cover">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">Health and Wellness</h3>
+                    <p class="text-gray-700 text-sm">
+                        We host free medical camps to provide basic healthcare services and wellness education to those who lack access to medical facilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonies Section -->
+    <section id="testimonies" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Life-Changing Testimonies</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                Hear from members of our church family and community whose lives have been transformed by God's grace.
+            </p>
+            <div class="carousel-container relative">
+                <div class="carousel-slide flex">
+                    <!-- Testimony Item 1 -->
+                    <div class="carousel-item p-4">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <blockquote class="text-xl text-gray-700 italic mb-4">
+                                "Joining PERM BANDA CHURCH changed my life. I found a true sense of family and purpose. The pastoral team's guidance helped me overcome challenges I never thought I could."
+                            </blockquote>
+                            <p class="font-semibold text-blue-600">- Jane A., Church Member</p>
+                        </div>
+                    </div>
+                    <!-- Testimony Item 2 -->
+                    <div class="carousel-item p-4">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <blockquote class="text-xl text-gray-700 italic mb-4">
+                                "The community outreach program provided me with the skills to start my own small business. I am forever grateful for the support and love I received from the church."
+                            </blockquote>
+                            <p class="font-semibold text-blue-600">- Mark T., Community Member</p>
+                        </div>
+                    </div>
+                    <!-- Testimony Item 3 -->
+                    <div class="carousel-item p-4">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <blockquote class="text-xl text-gray-700 italic mb-4">
+                                "I was struggling with my faith until I found this church. The sermons are powerful and truly speak to my heart. I feel closer to God than ever before."
+                            </blockquote>
+                            <p class="font-semibold text-blue-600">- Sarah P., Church Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sermons Section -->
+    <section id="sermons" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Watch Our Sermons</h2>
+            <p class="text-lg text-gray-600 mb-12">Catch up on our latest Sunday sermons and teachings from our YouTube channel.</p>
+            <div class="aspect-w-16 aspect-h-9 w-full md:w-3/4 lg:w-2/3 mx-auto shadow-xl rounded-xl overflow-hidden">
+                <iframe class="w-full h-96" src="https://www.youtube.com/embed/videoseries?list=PL3eWnL5jB7h_F-9iQ-iQ3_iI-j9D_5lq8&si=IgiAwA38V4zVibhD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <a href="https://youtube.com/@akats001?si=IgiAwA38V4zVibhD" target="_blank" class="mt-8 inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
+                Visit Our YouTube Channel
+            </a>
+        </div>
+    </section>
+
+    <!-- Giving/Donations Section -->
+    <section id="give" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Give & Donate</h2>
+            <p class="text-lg text-gray-600 mb-12">Your generous giving helps us to continue our mission and ministries.</p>
+            <div class="grid md:grid-cols-2 gap-8 items-center justify-center">
+                <!-- Donation Contacts -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Contact for Giving</h3>
+                    <div class="space-y-4 text-left">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/60x60/e5e7eb/4b5563?text=Pr.+Ambrose" alt="Pr. Ambrose Okurut" class="rounded-full">
+                            <div>
+                                <h4 class="text-xl font-semibold">Pr. Ambrose Okurut</h4>
+                                <p class="text-gray-600"><a href="tel:+256756334436">+256756334436</a></p>
+                                <p class="text-gray-600"><a href="tel:+256782334436">+256782334436</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/60x60/e5e7eb/4b5563?text=Deacon+Angela" alt="Deacon Angela Opaja" class="rounded-full">
+                            <div>
+                                <h4 class="text-xl font-semibold">Deacon Angela Opaja</h4>
+                                <p class="text-gray-600"><a href="tel:+2567540461221">+2567540461221</a></p>
+                                <p class="text-gray-600"><a href="tel:+256779323597">+256779323597</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Donation Image and details -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Online Giving</h3>
+                    <img src="https://placehold.co/500x350/d1d5db/4b5563?text=Online+Giving" alt="Online Giving" class="rounded-xl shadow-lg object-cover w-full mb-4">
+                    <p class="text-gray-700">
+                        While this is a placeholder, a real-world application would use a secure payment form with a backend system. Please contact the deacons for giving options.
+                    </p>
+                    <a href="mailto:pastor@permbandachurch.org" class="mt-6 inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">Email for More Info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prayer Request Form Section -->
+    <section id="prayer-request" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Submit a Prayer Request</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                Our team is dedicated to praying for your needs. Please fill out the form below, and we will lift your request up to God in faith. All requests are confidential.
+            </p>
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg max-w-xl mx-auto">
+                <form id="prayer-form" class="space-y-6">
+                    <div>
+                        <label for="prayer-name" class="block text-left text-sm font-medium text-gray-700">Your Name (Optional)</label>
+                        <input type="text" id="prayer-name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="prayer-email" class="block text-left text-sm font-medium text-gray-700">Your Email (Optional)</label>
+                        <input type="email" id="prayer-email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="prayer-message" class="block text-left text-sm font-medium text-gray-700">Your Prayer Request <span class="text-red-500">*</span></label>
+                        <textarea id="prayer-message" name="message" rows="5" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300">
+                            Submit Request
+                        </button>
+                    </div>
+                </form>
+                <p id="prayer-status" class="mt-4 text-sm text-center font-medium"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Our Location</h2>
+            <p class="text-lg text-gray-600 mb-12">Find us and join our community in person.</p>
+            <div class="aspect-w-16 aspect-h-9 w-full md:w-3/4 lg:w-2/3 mx-auto shadow-xl rounded-xl overflow-hidden">
+                <iframe class="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7042858102213!2d32.6174163!3d0.3259838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db02b3992095f%3A0x6d907f15e8b6b060!2sPERM%20BANDA%20CHURCH!5e0!3m2!1sen!2sug!4v1700724810848!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p class="mt-8 text-lg text-gray-600">
+                You can also reach us via phone or email for any inquiries.
+            </p>
+            <div class="mt-4 space-y-2">
+                <p class="text-lg font-semibold">General Inquiries:</p>
+                <p class="text-blue-600 font-medium">
+                    <a href="mailto:pastor@permbandachurch.org" class="hover:underline">pastor@permbandachurch.org</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 PERM BANDA CHURCH. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400 transition-colors duration-300">Terms of Service</a>
+            </div>
+            <div class="mt-6 text-gray-400 text-sm">
+                <p>Senior Pastor: Rev. Emmanuel Akatukunda</p>
+                <p>Assistant Pastor: Pr. Gideon Onyait</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Forms -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const prayerForm = document.getElementById('prayer-form');
+            const prayerStatus = document.getElementById('prayer-status');
+            const carouselSlide = document.querySelector('.carousel-slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Handle prayer form submission
+            prayerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                prayerStatus.textContent = 'Submitting your request...';
+                prayerStatus.classList.remove('text-red-500', 'text-green-500');
+                prayerStatus.classList.add('text-gray-500');
+
+                // This is a client-side only form. In a real application, this would
+                // send data to a backend server (e.g., using fetch API) to be stored
+                // and accessed by the pastoral team.
+
+                const formData = new FormData(prayerForm);
+                const data = Object.fromEntries(formData.entries());
+
+                console.log('Form data:', data);
+
+                // Simulate a successful submission
+                setTimeout(() => {
+                    prayerStatus.textContent = 'Thank you! Your prayer request has been submitted.';
+                    prayerStatus.classList.remove('text-gray-500');
+                    prayerStatus.classList.add('text-green-500');
+                    prayerForm.reset();
+                }, 2000);
+            });
+
+            // Carousel functionality
+            const updateCarousel = () => {
+                const itemWidth = carouselSlide.children[0].offsetWidth;
+                carouselSlide.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            };
+
+            nextBtn.addEventListener('click', () => {
+                const maxIndex = carouselSlide.children.length - 1;
+                currentIndex = (currentIndex + 1) % (maxIndex + 1);
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const maxIndex = carouselSlide.children.length - 1;
+                currentIndex = (currentIndex - 1 + maxIndex + 1) % (maxIndex + 1);
+                updateCarousel();
+            });
+        });
+    </script>
+</body>
+</html>
